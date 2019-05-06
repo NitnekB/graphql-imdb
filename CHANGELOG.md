@@ -11,6 +11,17 @@ All notable changes to this project will be documented in this file.
 ### Removed
 -->
 
+## [Unreleased]
+
+### Added
+### Changed
+
+- npm start using babel to activate `ES6` _import_ feature support
+- Split graphQL object definition from schema
+
+### Fixed
+### Removed
+
 ## [0.1.0]
 
 ### Added

@@ -44,6 +44,30 @@ Then launch the app
 npm start
 ```
 
-### Development
+Finally, open your favorite Nav and go to `http://localhost:3000/graphql`
 
-# TODO: add missing informations
+Here's an example of query for the movie _Guardians of the Galaxy Vol. 2_
+
+```json
+query {
+  movie(id: "tt3896198") {
+    imdb_id
+    title
+    runtime
+    director
+    genre
+    plot
+    country
+    boxoffice
+    production
+    ratings {
+      source
+      value
+    }
+  }
+}
+```
+
+## Disclaimer
+
+To activate _ES6_ `import` features, I used this hack: https://timonweb.com/posts/how-to-enable-es6-imports-in-nodejs/
