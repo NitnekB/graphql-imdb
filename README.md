@@ -67,3 +67,7 @@ query {
   }
 }
 ```
+
+## Disclaimer
+
+To activate _ES6_ `import` features, I used this hack: https://timonweb.com/posts/how-to-enable-es6-imports-in-nodejs/

@@ -1,7 +1,7 @@
-// requires
-const express = require('express')
-const graphqlHTTP = require('express-graphql')
-const schema = require('./imdb/schema')
+// imports
+import express from 'express';
+import graphqlHTTP from 'express-graphql';
+import schema from './imdb/schema';
 
 // environment variables
 process.env.NODE_ENV = 'development';
@@ -10,7 +10,7 @@ process.env.NODE_ENV = 'development';
 // process.env.NODE_ENV = 'staging';
 
 // config variables
-const config = require('./config/config.js');
+import config from './config/config.js';
 
 // module variables
 const app = express();

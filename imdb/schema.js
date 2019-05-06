@@ -1,57 +1,19 @@
-const fetch = require('node-fetch')
-const {
+// imports
+import fetch from 'node-fetch';
+import {
   GraphQLSchema,
   GraphQLObjectType,
-  GraphQLInt,
-  GraphQLString,
-  GraphQLList
-} = require('graphql')
+  GraphQLString
+} from 'graphql';
+import MovieType from './object_types.js';
 
-const MovieType = new GraphQLObjectType({
-  name: 'Movie',
-  description: '...',
-
-  fields: () => ({
-    title: {
-      type: GraphQLString,
-      resolve: json =>
-        json.Title
-    },
-    year: {
-      type: GraphQLInt,
-      resolve: json =>
-        json.Year
-    },
-    ratings: {
-      type: new GraphQLList(RatingType),
-      resolve: json =>
-        json.Ratings
-    }
-  })
-})
-
-const RatingType = new GraphQLObjectType({
-  name: 'Rating',
-  description: '...',
-
-  fields: () => ({
-    source: {
-      type: GraphQLString,
-      resolve: json =>
-        json.Source
-    },
-    value: {
-      type: GraphQLString,
-      resolve: json =>
-        json.Value
-    }
-  })
-})
+// variables
+const baseUrl = 'http://www.omdbapi.com/';
 
 module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
-    description: '...',
+    description: 'GraphQLObjectType Query to fetch movie by imdb ID',
 
     fields: () => ({
       movie: {
@@ -60,7 +22,7 @@ module.exports = new GraphQLSchema({
           id: { type: GraphQLString }
         },
         resolve: (root, args) => fetch(
-          `http://www.omdbapi.com/?i=${args.id}&apikey=${global.gConfig.omdb_api_key}`
+          `${baseUrl}?i=${args.id}&apikey=${global.gConfig.omdb_api_key}`
         ).then(response => response.json())
       }
     })
