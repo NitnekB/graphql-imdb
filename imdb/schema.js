@@ -60,7 +60,7 @@ module.exports = new GraphQLSchema({
           id: { type: GraphQLString }
         },
         resolve: (root, args) => fetch(
-          `http://www.omdbapi.com/?i=${args.id}&apikey=67804764`
+          `http://www.omdbapi.com/?i=${args.id}&apikey=${global.gConfig.omdb_api_key}`
         ).then(response => response.json())
       }
     })
