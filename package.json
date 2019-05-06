@@ -1,0 +1,26 @@
+{
+  "name": "graphql-imdb",
+  "version": "1.0.0",
+  "description": "Third party API for IMDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NitnekB/graphql-imdb.git"
+  },
+  "author": "nitnekb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NitnekB/graphql-imdb/issues"
+  },
+  "homepage": "https://github.com/NitnekB/graphql-imdb#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.2.1",
+    "node-fetch": "^2.5.0"
+  }
+}
