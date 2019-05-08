@@ -50,7 +50,7 @@ Here's an example of query for the movie _Guardians of the Galaxy Vol. 2_
 
 ```json
 query {
-  movie(id: "tt3896198") {
+  movie(title: "star wars") {
     imdb_id
     title
     runtime
