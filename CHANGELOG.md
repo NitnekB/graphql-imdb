@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 
 - npm start using babel to activate `ES6` _import_ feature support
 - Split graphQL object definition from schema
+- Fetch movie by _title_ instead of _imdb_id_
 
 ### Fixed
 ### Removed
